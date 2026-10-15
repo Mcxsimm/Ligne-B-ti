@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://rrxxfwhxvxozgixzkkzp.supabase.co wss://rrxxfwhxvxozgixzkkzp.supabase.co; form-action 'self'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Chantier | Espace Ligne&amp;Bati</title>
+  <meta name="theme-color" content="#23262A">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="preload" href="../assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/espace.css">
+  <script src="../assets/js/espace/config.js" defer></script>
+  <script src="../assets/vendor/supabase/supabase.js" defer></script>
+  <script src="../assets/js/espace/commun.js" defer></script>
+  <script src="../assets/js/espace/chantier.js" defer></script>
+</head>
+<body class="espace">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header site-header--espace">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <img src="../assets/images/logo/logo-horizontal.svg" alt="Ligne&amp;Bati — tableau de bord" width="158" height="44">
+      </a>
+      <nav class="site-nav" aria-label="Navigation de l'espace">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+          <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="nav-toggle__text">Menu</span>
+        </button>
+        <ul class="site-nav__list" id="menu-principal">
+          <li><a href="index.html">Tableau de bord</a></li>
+          <li data-role="admin salarie" hidden><a href="carte.html">Carte des outils</a></li>
+          <li data-role="admin" hidden><a href="comptes.html">Comptes</a></li>
+          <li><a href="mot-de-passe.html">Mot de passe</a></li>
+          <li class="site-nav__user">
+            <span class="user-chip"><span data-nom-utilisateur></span> <span class="user-chip__role" data-role-utilisateur></span></span>
+            <button class="btn btn--ghost btn--sm" type="button" data-deconnexion>Se déconnecter</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu" class="espace-main">
+    <noscript><div class="container section"><p class="form-status form-status--error">L'espace connecté nécessite JavaScript.</p></div></noscript>
+    <section class="espace-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Tableau de bord</a></li><li aria-current="page" id="fil-titre">Chantier</li></ol></nav>
+        <div class="chantier-head">
+          <div>
+            <p class="eyebrow" id="ch-ref">Chantier</p>
+            <h1 id="ch-titre">Chargement…</h1>
+            <p class="lead" id="ch-sous-titre"></p>
+          </div>
+          <div class="ring" id="ch-ring" data-ring="0" role="img" aria-label="Avancement">
+            <span class="ring__val" id="ch-pct">0 %</span><span class="ring__lbl">avancement</span>
+          </div>
+        </div>
+        <div id="ch-frise"></div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div id="etat" class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+      <div id="ch-message" class="message-client" hidden></div>
+      <p id="ch-desc" class="ch-desc" hidden></p>
+    </div>
+
+    <div class="container chantier-layout">
+      <section class="espace-section" aria-labelledby="jalons-titre">
+        <div class="espace-section__head"><h2 id="jalons-titre">Étapes</h2></div>
+        <ol id="jalons" class="jalons"></ol>
+        <form id="form-jalon" class="form panel form--inline" data-role="admin salarie" hidden novalidate>
+          <h3>Ajouter une étape</h3>
+          <div class="form__row form__row--2">
+            <div class="field"><label for="j-titre">Intitulé *</label><input type="text" id="j-titre" required maxlength="140"></div>
+            <div class="field"><label for="j-date">Date prévue</label><input type="date" id="j-date"></div>
+          </div>
+          <div class="field field--check"><input type="checkbox" id="j-visible" checked><label for="j-visible">Visible par le client</label></div>
+          <button class="btn btn--sm" type="submit">Ajouter l'étape</button>
+        </form>
+      </section>
+
+      <section class="espace-section" aria-labelledby="journal-titre">
+        <div class="espace-section__head"><h2 id="journal-titre">Journal du chantier</h2></div>
+        <form id="form-journal" class="form panel" data-role="admin salarie" hidden novalidate>
+          <h3>Nouvelle entrée</h3>
+          <div class="form__row form__row--2">
+            <div class="field"><label for="n-titre">Titre *</label><input type="text" id="n-titre" required maxlength="160" placeholder="Réunion de chantier n° 3"></div>
+            <div class="field"><label for="n-date">Date</label><input type="date" id="n-date"></div>
+          </div>
+          <div class="field"><label for="n-contenu">Contenu</label><textarea id="n-contenu" maxlength="8000"></textarea></div>
+          <div class="field field--check"><input type="checkbox" id="n-visible"><label for="n-visible">Visible par le client</label></div>
+          <button class="btn btn--sm" type="submit">Publier l'entrée</button>
+        </form>
+        <ol id="journal" class="journal"></ol>
+      </section>
+    </div>
+
+    <section class="container espace-section" data-role="admin salarie" hidden aria-labelledby="reglages-titre">
+      <details class="panel reglages">
+        <summary id="reglages-titre">Informations et réglages du chantier</summary>
+        <form id="form-reglages" class="form form--plain" novalidate>
+          <div class="form__row form__row--2">
+            <div class="field"><label for="r-titre">Intitulé *</label><input type="text" id="r-titre" required maxlength="140"></div>
+            <div class="field"><label for="r-ref">Référence</label><input type="text" id="r-ref" maxlength="40"></div>
+          </div>
+          <div class="form__row form__row--2">
+            <div class="field"><label for="r-commune">Commune</label><input type="text" id="r-commune" maxlength="80"></div>
+            <div class="field"><label for="r-statut">Phase</label><select id="r-statut">
+              <option value="preparation">Préparation</option><option value="consultation">Consultation</option>
+              <option value="travaux">Travaux</option><option value="reception">Réception</option>
+              <option value="termine">Terminé</option><option value="suspendu">Suspendu</option></select></div>
+          </div>
+          <div class="form__row form__row--2">
+            <div class="field"><label for="r-debut">Début prévu</label><input type="date" id="r-debut"></div>
+            <div class="field"><label for="r-fin">Fin prévue</label><input type="date" id="r-fin"></div>
+          </div>
+          <div class="field"><label for="r-client">Client</label><select id="r-client"><option value="">— Aucun —</option></select></div>
+          <div class="field"><label for="r-message">Message affiché au client</label><textarea id="r-message" maxlength="1000" placeholder="Ex. : les travaux de plomberie démarrent lundi 3 novembre."></textarea></div>
+          <div class="field"><label for="r-desc">Description du projet (visible par le client)</label><textarea id="r-desc" maxlength="4000" aria-describedby="r-desc-aide"></textarea><p class="field__hint" id="r-desc-aide">Pour une note réservée à l'équipe, utilisez une entrée du journal non visible par le client.</p></div>
+          <div class="actions">
+            <button class="btn" type="submit">Enregistrer</button>
+            <button class="btn btn--danger" type="button" id="btn-supprimer" data-role="admin" hidden>Supprimer le chantier</button>
+          </div>
+        </form>
+      </details>
+    </section>
+  </main>
+  <footer class="espace-footer">
+    <div class="container">
+      <p>Espace Ligne&amp;Bati · <a href="../index.html">Retour au site</a> · <a href="../confidentialite.html#espace">Données personnelles</a></p>
+    </div>
+  </footer>
+</body>
+</html>

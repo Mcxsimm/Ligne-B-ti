@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /espace/
 
 Sitemap: https://mcxsimm.github.io/Ligne-B-ti/sitemap.xml

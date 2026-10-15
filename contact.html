@@ -49,6 +49,7 @@
           <li><a href="prestations.html">Prestations</a></li>
           <li><a href="methode.html">Méthode</a></li>
           <li><a href="a-propos.html">À propos</a></li>
+          <li class="site-nav__login"><a href="espace/connexion.html"><svg class="login-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Se connecter</a></li>
           <li class="site-nav__cta"><a class="btn btn--sm" href="contact.html" aria-current="page">Parler de mon projet</a></li>
         </ul>
       </nav>
@@ -93,14 +94,14 @@
           <!--
             ENVOI DU FORMULAIRE
             Service : Web3Forms (offre gratuite), aucune donnée n'est stockée dans ce dépôt.
-            1. Créez une clé d'accès gratuite sur https://web3forms.com avec votre e-mail professionnel.
-            2. Remplacez A_COMPLETER_CLE_WEB3FORMS ci-dessous par cette clé (elle est publique par conception).
+            1. La clé d'accès (access_key) ci-dessous est publique par conception : elle permet seulement
+               d'envoyer des messages vers l'adresse associée sur web3forms.com.
+            2. Pour changer d'adresse de réception, générez une nouvelle clé sur web3forms.com.
             3. Facultatif : renseignez data-fallback-email avec votre e-mail professionnel.
-            Tant que la clé n'est pas renseignée, le formulaire n'envoie rien et l'indique clairement.
           -->
           <form id="contact-form" class="form" action="https://api.web3forms.com/submit" method="POST"
                 data-fallback-email="" aria-describedby="form-intro">
-            <input type="hidden" name="access_key" value=8c07bea2-a5ab-4a95-87ab-f6578857ba7c>
+            <input type="hidden" name="access_key" value="8c07bea2-a5ab-4a95-87ab-f6578857ba7c">
             <p id="form-intro" class="small">Les champs suivis d'un astérisque (*) sont obligatoires.</p>
 
             <div class="hp-field" aria-hidden="true">

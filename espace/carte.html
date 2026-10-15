@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://rrxxfwhxvxozgixzkkzp.supabase.co wss://rrxxfwhxvxozgixzkkzp.supabase.co; form-action 'self'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Carte des outils | Espace Ligne&amp;Bati</title>
+  <meta name="theme-color" content="#23262A">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="preload" href="../assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/espace.css">
+  <script src="../assets/js/espace/config.js" defer></script>
+  <script src="../assets/vendor/supabase/supabase.js" defer></script>
+  <script src="../assets/js/espace/commun.js" defer></script>
+  <script src="../assets/js/espace/carte.js" defer></script>
+</head>
+<body class="espace">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header site-header--espace">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <img src="../assets/images/logo/logo-horizontal.svg" alt="Ligne&amp;Bati — tableau de bord" width="158" height="44">
+      </a>
+      <nav class="site-nav" aria-label="Navigation de l'espace">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+          <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="nav-toggle__text">Menu</span>
+        </button>
+        <ul class="site-nav__list" id="menu-principal">
+          <li><a href="index.html">Tableau de bord</a></li>
+          <li data-role="admin salarie" hidden><a href="carte.html" aria-current="page">Carte des outils</a></li>
+          <li data-role="admin" hidden><a href="comptes.html">Comptes</a></li>
+          <li><a href="mot-de-passe.html">Mot de passe</a></li>
+          <li class="site-nav__user">
+            <span class="user-chip"><span data-nom-utilisateur></span> <span class="user-chip__role" data-role-utilisateur></span></span>
+            <button class="btn btn--ghost btn--sm" type="button" data-deconnexion>Se déconnecter</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu" class="espace-main">
+    <noscript><div class="container section"><p class="form-status form-status--error">L'espace connecté nécessite JavaScript.</p></div></noscript>
+    <section class="espace-head">
+      <div class="container">
+        <p class="eyebrow">Pilotage</p>
+        <h1>Carte des outils</h1>
+        <p class="lead">Tout ce dont Ligne&amp;Bati a besoin pour exercer et piloter l'activité, organisé en trois lignes. Cliquez sur un élément pour changer son état ou ajouter une note.</p>
+      </div>
+    </section>
+
+    <section class="container espace-section">
+      <div id="etat" class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+      <div class="carte-barre">
+        <div class="carte-hub" id="hub">
+          <div class="ring ring--large" id="hub-ring" data-ring="0" role="img" aria-label="Avancement global">
+            <span class="ring__val" id="hub-pct">0 %</span><span class="ring__lbl">en place</span>
+          </div>
+          <dl class="carte-compteurs" id="compteurs"></dl>
+        </div>
+        <fieldset class="filtres">
+          <legend>Afficher</legend>
+          <label><input type="radio" name="filtre" value="tous" checked> Tout</label>
+          <label><input type="radio" name="filtre" value="a_faire"> À faire</label>
+          <label><input type="radio" name="filtre" value="prioritaires"> Prioritaires non faits</label>
+          <label><input type="radio" name="filtre" value="en_place"> En place</label>
+        </fieldset>
+      </div>
+      <div class="metro" id="metro"></div>
+      <h2 class="visually-hidden">Légende</h2>
+      <ul class="legende">
+        <li><span class="pastille pastille--a_faire"></span> À faire</li>
+        <li><span class="pastille pastille--en_cours"></span> En cours</li>
+        <li><span class="pastille pastille--en_place"></span> En place</li>
+        <li><span class="pastille pastille--non_concerne"></span> Non concerné</li>
+        <li><span class="prio-mark">!</span> Priorité haute</li>
+      </ul>
+    </section>
+
+    <dialog id="fiche" class="fiche" aria-labelledby="fiche-titre">
+      <form method="dialog" id="form-fiche" class="form form--plain">
+        <p class="eyebrow" id="fiche-cat"></p>
+        <h2 id="fiche-titre">Outil</h2>
+        <p id="fiche-desc" class="fiche__desc"></p>
+        <p id="fiche-lien" hidden><a href="../index.html" id="fiche-lien-a">Ressource officielle ↗</a></p>
+        <div class="field"><label for="fiche-statut">État</label>
+          <select id="fiche-statut"><option value="a_faire">À faire</option><option value="en_cours">En cours</option><option value="en_place">En place</option><option value="non_concerne">Non concerné</option></select></div>
+        <div class="field"><label for="fiche-notes">Notes</label><textarea id="fiche-notes" maxlength="2000" placeholder="Prestataire choisi, date, référence de contrat…"></textarea></div>
+        <div class="actions">
+          <button class="btn" type="submit" value="enregistrer" id="fiche-ok">Enregistrer</button>
+          <button class="btn btn--ghost" type="submit" value="annuler" formnovalidate>Fermer</button>
+        </div>
+      </form>
+    </dialog>
+  </main>
+  <footer class="espace-footer">
+    <div class="container">
+      <p>Espace Ligne&amp;Bati · <a href="../index.html">Retour au site</a> · <a href="../confidentialite.html#espace">Données personnelles</a></p>
+    </div>
+  </footer>
+</body>
+</html>
