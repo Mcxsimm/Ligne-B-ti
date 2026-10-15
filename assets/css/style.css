@@ -129,6 +129,11 @@ body {
   overflow-x: hidden;
 }
 
+/* L'attribut hidden doit toujours l'emporter sur les display des composants */
+[hidden] {
+  display: none !important;
+}
+
 img,
 svg {
   display: block;
@@ -572,6 +577,18 @@ strong {
   color: var(--ink);
 }
 
+/* Lien « Se connecter » vers l'espace client */
+.site-nav__list .site-nav__login a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.login-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
 /* Navigation mobile : panneau déroulant */
 @media (max-width: 959px) {
   .site-nav__list {
@@ -665,6 +682,14 @@ strong {
   .site-nav__list a:not(.btn):hover::after,
   .site-nav__list a[aria-current="page"]::after {
     transform: scaleX(1);
+  }
+
+  .site-nav__list .site-nav__login {
+    margin-left: 0.25rem;
+  }
+
+  .site-nav__list .site-nav__login a {
+    color: var(--ink-soft);
   }
 
   .site-nav__list .site-nav__cta {

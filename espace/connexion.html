@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://rrxxfwhxvxozgixzkkzp.supabase.co wss://rrxxfwhxvxozgixzkkzp.supabase.co; form-action 'self'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Connexion | Espace Ligne&amp;Bati</title>
+  <meta name="theme-color" content="#23262A">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="preload" href="../assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/espace.css">
+  <script src="../assets/js/espace/config.js" defer></script>
+  <script src="../assets/vendor/supabase/supabase.js" defer></script>
+  <script src="../assets/js/espace/commun.js" defer></script>
+  <script src="../assets/js/espace/connexion.js" defer></script>
+</head>
+<body class="espace espace--connexion">
+  <main id="contenu" class="auth">
+    <div class="auth__panel">
+      <a class="auth__logo" href="../index.html"><img src="../assets/images/logo/logo-horizontal.svg" alt="Ligne&amp;Bati — retour au site" width="190" height="53"></a>
+      <h1>Espace client et équipe</h1>
+      <p class="auth__intro">Suivez l'avancement de votre chantier. Les comptes sont créés par Ligne&amp;Bati : vous avez reçu vos identifiants lors du démarrage de votre projet.</p>
+      <div id="etat" class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+      <form id="form-connexion" class="form form--compact" novalidate>
+        <div class="field">
+          <label for="email">Adresse e-mail</label>
+          <input type="email" id="email" name="email" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="mdp">Mot de passe</label>
+          <input type="password" id="mdp" name="mdp" autocomplete="current-password" required>
+        </div>
+        <button class="btn btn--block" type="submit">Se connecter</button>
+      </form>
+      <p class="auth__aide">Mot de passe oublié ? <a href="../contact.html">Contactez Ligne&amp;Bati</a> : un nouveau mot de passe provisoire vous sera transmis.</p>
+      <p class="auth__retour"><a href="../index.html">← Retour au site</a></p>
+    </div>
+    <div class="auth__visuel" aria-hidden="true">
+      <img src="../assets/images/plan-renovation.svg" alt="" width="720" height="560">
+    </div>
+  </main>
+</body>
+</html>

@@ -102,11 +102,19 @@ Ces formulations sont des choix de positionnement que vous devez pouvoir tenir :
 
 ---
 
+## B bis. Espace connecté (portail clients et équipe)
+
+- [ ] Créer votre compte administrateur, fermer les inscriptions libres, renseigner l'adresse du site : [`ESPACE.md`](ESPACE.md), section 2.
+- [ ] Ajouter l'espace connecté à votre registre RGPD (données clients hébergées chez Supabase, à Paris).
+- [ ] Prévoir un export régulier des données (pas de sauvegarde téléchargeable sur l'offre gratuite).
+- [ ] Choisir un logiciel de facturation conforme à la facturation électronique : la comptabilité n'est pas intégrée au portail.
+
 ## C. Budget technique
 
 | Poste | Coût |
 |---|---|
 | GitHub (dépôt public) et GitHub Pages | 0 € |
+| Supabase (espace connecté), offre gratuite | 0 € (mise en pause après une semaine d'inactivité ; offre payante en option) |
 | Formulaire Web3Forms, offre gratuite | 0 € |
 | Polices, logo, illustrations, code | 0 € |
 | Nom de domaine `.fr` ou `.com` | environ 10 à 20 € par an selon le registraire (prix à vérifier, souvent réduits la première année) |

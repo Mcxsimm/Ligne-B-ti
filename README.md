@@ -6,6 +6,8 @@ Site statique (HTML, CSS, JavaScript natif) de Ligne&Bati, accompagnement de pro
 - Hébergement gratuit sur GitHub Pages ; formulaire de contact gratuit via Web3Forms.
 - Aucun cookie, aucun traceur, polices hébergées sur le site (pas d'appel à Google Fonts).
 
+> **Espace connecté** (bouton « Se connecter ») : mise en service et utilisation dans [`ESPACE.md`](ESPACE.md).
+
 > **Avant toute mise en ligne publique, traitez la liste [`LANCEMENT.md`](LANCEMENT.md).**
 > Elle recense les informations à compléter et les vérifications juridiques et assurantielles indispensables.
 
@@ -35,6 +37,12 @@ Site statique (HTML, CSS, JavaScript natif) de Ligne&Bati, accompagnement de pro
 │       ├── zone-intervention.svg     Schéma de la zone
 │       ├── og-image.png              Image de partage (réseaux sociaux)
 │       └── favicon-32.png, apple-touch-icon.png
+├── espace/                  Espace connecté (clients, salariés, administrateur) — voir ESPACE.md
+│   ├── connexion.html, index.html (tableau de bord), chantier.html,
+│   └── carte.html (carte des outils), comptes.html, mot-de-passe.html
+├── assets/js/espace/        Scripts de l'espace (config.js = URL et clé publique Supabase)
+├── assets/vendor/supabase/  Bibliothèque Supabase (licence MIT), servie depuis le site
+├── supabase/                Schéma de la base (migrations) et fonction serveur gerer-comptes
 ├── outils/changer-adresse.sh  Remplace l'adresse du site (passage au nom de domaine)
 ├── LANCEMENT.md             Check-list avant publication
 └── README.md
