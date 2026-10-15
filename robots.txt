@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mcxsimm.github.io/Ligne-B-ti/sitemap.xml

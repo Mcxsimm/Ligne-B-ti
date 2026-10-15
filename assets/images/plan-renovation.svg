@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-labelledby="t d">
+  <title id="t">Plan de principe d'un logement en rénovation</title>
+  <desc id="d">Dessin au trait d'un plan d'appartement avec cotes. La cuisine et la salle d'eau sont repérées comme lots de travaux à consulter.</desc>
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#E9E3D8" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#F1E8D8"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#C9B490" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+  <rect width="720" height="560" fill="#FFFDF9"/>
+  <rect width="720" height="560" fill="url(#grid)"/>
+
+  <!-- zones de travaux -->
+  <rect x="380" y="70" width="260" height="180" fill="url(#hatch)"/>
+  <path d="M300 300H380V320H420V470H300Z" fill="#E3E8E0"/>
+
+  <g fill="none" stroke="#23262A" stroke-linecap="square">
+    <!-- murs extérieurs -->
+    <rect x="80" y="70" width="560" height="400" stroke-width="10"/>
+    <!-- cloisons -->
+    <path d="M380 70V250M380 250H640M80 300H380M300 300V470M420 320V470M380 320H640M380 300V320" stroke-width="5"/>
+  </g>
+
+  <!-- baies (fenêtres) -->
+  <g fill="#FFFDF9" stroke="#23262A" stroke-width="1.4">
+    <rect x="150" y="64" width="110" height="12"/>
+    <rect x="460" y="64" width="90" height="12"/>
+    <rect x="634" y="360" width="12" height="80"/>
+    <rect x="74" y="120" width="12" height="120"/>
+    <rect x="130" y="464" width="100" height="12"/>
+  </g>
+  <g stroke="#23262A" stroke-width="1"><path d="M150 70H260M460 70H550M640 360V440M80 120V240M130 470H230"/></g>
+
+  <!-- portes -->
+  <g fill="none" stroke="#23262A" stroke-width="1.2">
+    <rect x="236" y="296" width="44" height="8" fill="#FFFDF9" stroke="none"/>
+    <path d="M236 300V256A44 44 0 0 1 280 300"/>
+    <rect x="456" y="316" width="44" height="8" fill="#FFFDF9" stroke="none"/>
+    <path d="M500 320V364A44 44 0 0 1 456 320" />
+    <rect x="316" y="296" width="40" height="8" fill="#FFFDF9" stroke="none"/>
+    <path d="M356 300V340A40 40 0 0 1 316 300"/>
+  </g>
+
+  <!-- équipements de principe -->
+  <g fill="none" stroke="#6B7D68" stroke-width="1.2">
+    <path d="M392 82H628V112H392Z"/>
+    <circle cx="420" cy="97" r="8"/><circle cx="446" cy="97" r="8"/>
+    <rect x="560" y="86" width="40" height="22" rx="3"/>
+    <rect x="470" y="160" width="110" height="46" rx="2"/>
+    <rect x="312" y="410" width="54" height="50" rx="2"/>
+    <rect x="374" y="420" width="36" height="40" rx="18"/>
+    <path d="M312 410L366 460M366 410L312 460" stroke-width="0.8"/>
+  </g>
+
+  <!-- étiquettes de pièces -->
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.6" fill="#4A4F55" text-anchor="middle">
+    <text x="230" y="190">SÉJOUR</text>
+    <text x="510" y="146">CUISINE</text>
+    <text x="510" y="290">DÉGAGEMENT</text>
+    <text x="190" y="392">CHAMBRE</text>
+    <text x="360" y="372">SALLE</text><text x="360" y="386">D'EAU</text>
+    <text x="530" y="402">CHAMBRE</text>
+  </g>
+
+  <!-- repères de lots -->
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" text-anchor="middle">
+    <circle cx="610" cy="225" r="14" fill="#23262A"/><text x="610" y="229" fill="#F7F4EE">01</text>
+    <circle cx="398" cy="330" r="14" fill="#23262A"/><text x="398" y="334" fill="#F7F4EE">02</text>
+  </g>
+
+  <!-- cotes -->
+  <g stroke="#8A8F92" stroke-width="0.9" fill="none">
+    <path d="M80 36H640M80 30V42M380 30V42M640 30V42"/>
+    <path d="M40 70V470M34 70H46M34 300H46M34 470H46"/>
+    <path d="M77 33L83 39M377 33L383 39M637 33L643 39M37 67L43 73M37 297L43 303M37 467L43 473"/>
+  </g>
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#5C6166" text-anchor="middle">
+    <text x="230" y="28">5,40</text>
+    <text x="510" y="28">4,60</text>
+    <text x="30" y="189" transform="rotate(-90 30 189)">4,15</text>
+    <text x="30" y="389" transform="rotate(-90 30 389)">3,05</text>
+  </g>
+
+  <!-- cartouche -->
+  <g font-family="Inter, Helvetica, Arial, sans-serif" fill="#23262A">
+    <rect x="80" y="500" width="560" height="0.8" fill="#C9B490"/>
+    <text x="80" y="526" font-size="11" letter-spacing="1.8" font-weight="600">PLAN DE PRINCIPE — RÉNOVATION</text>
+    <text x="80" y="544" font-size="10.5" fill="#5C6166">Illustration non contractuelle</text>
+    <rect x="418" y="516" width="16" height="12" fill="url(#hatch)" stroke="#C9B490" stroke-width="0.8"/>
+    <text x="440" y="526" font-size="10.5" fill="#4A4F55">01 Lot cuisine</text>
+    <rect x="530" y="516" width="16" height="12" fill="#E3E8E0" stroke="#6B7D68" stroke-width="0.8"/>
+    <text x="552" y="526" font-size="10.5" fill="#4A4F55">02 Lot salle d'eau</text>
+  </g>
+</svg>

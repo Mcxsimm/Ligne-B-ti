@@ -1,0 +1,12 @@
+# Systèmes et éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.bak
+
+# Ne jamais versionner de données personnelles ou de secrets
+*.env
+.env*
+demandes/
+exports/
