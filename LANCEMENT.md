@@ -9,20 +9,31 @@ Les points réglementaires sont donnés pour vous orienter. Ils ne remplacent pa
 
 Recherchez `À COMPLÉTER` dans le dépôt : chaque occurrence est encadrée en pointillés sur le site.
 
-| Où | Information |
-|---|---|
-| Pied de page (8 pages), `contact.html` | E-mail professionnel, téléphone et plages horaires |
-| `contact.html` | Clé Web3Forms (`A_COMPLETER_CLE_WEB3FORMS`) et, si souhaité, `data-fallback-email` |
-| `mentions-legales.html` | Identité de l'exploitant, forme juridique, adresse, SIREN, immatriculation, TVA, directeur de publication, assurances, médiateur, date |
-| `confidentialite.html` | Responsable du traitement, e-mail de contact, fournisseur de messagerie, vérification de Web3Forms, date |
-| `prestations.html` (section « Cadre ») | Assurances : assureur, n° de contrat, garanties — ou retrait des missions non couvertes |
-| `a-propos.html` | Parcours professionnel, photo, qualifications éventuelles |
+| Où | Information | État |
+|---|---|---|
+| `contact.html` | Clé Web3Forms | ✅ fait |
+| `contact.html` (colonne Coordonnées) | E-mail et téléphone | ⚠️ saisis, mais encore affichés en style « à compléter » et non cliquables |
+| `contact.html` | `data-fallback-email` (adresse de secours si le service tombe) | ⬜ vide |
+| Pied de page (8 pages) | E-mail et téléphone | ⬜ à faire |
+| `mentions-legales.html` | Identité, forme juridique, adresse, SIREN, immatriculation, TVA, capital, e-mail, téléphone, directeur de publication, assurances, médiateur | ⬜ à faire |
+| `confidentialite.html` | Identité et adresse du responsable, e-mail pour l'exercice des droits | ⬜ à faire |
+| `confidentialite.html` | Fournisseur de messagerie (Google / Gmail) | ✅ fait |
+| `confidentialite.html` | Conditions Web3Forms (durée exacte, pays, garanties de transfert) | ⚠️ texte prudent rédigé, à vérifier sur web3forms.com/privacy et web3forms.com/dpa |
+| `mentions-legales.html`, `confidentialite.html` | Date de mise à jour | ✅ 15 octobre 2026 |
+| `prestations.html` (section « Cadre ») | Assurances, ou retrait des missions non couvertes | ⬜ à faire |
+| `a-propos.html` | Parcours, photo, qualifications | ⬜ à faire |
 
-Remplacer dans le pied de page et la page contact, par exemple :
+**Coordonnées affichées publiquement.** Une adresse e-mail et un numéro publiés sur un site sont collectés par des robots (spam, démarchage). Avant de les reporter sur toutes les pages, choisissez :
+- une **adresse e-mail professionnelle** (sur votre futur nom de domaine, ou une adresse dédiée à l'activité) plutôt que votre adresse personnelle ;
+- un **numéro dédié** à l'activité si possible (seconde ligne ou eSIM à faible coût) ;
+- ou de ne publier que le formulaire, sans e-mail ni téléphone en clair (les mentions légales exigent toutefois un moyen de contact direct : un e-mail suffit).
+
+Format à utiliser pour que les coordonnées soient cliquables :
 ```html
 <a href="mailto:contact@votre-domaine.fr">contact@votre-domaine.fr</a>
 <a href="tel:+33600000000">06 00 00 00 00</a>
 ```
+Dans `contact.html`, retirez aussi la balise `<span class="todo">…</span>` qui entoure vos coordonnées (elle produit le cadre pointillé).
 
 ### Engagements rédigés dans le site, à confirmer ou modifier
 Ces formulations sont des choix de positionnement que vous devez pouvoir tenir :
@@ -76,6 +87,8 @@ Ces formulations sont des choix de positionnement que vous devez pouvoir tenir :
 - [ ] Faire rédiger ou relire par un avocat un **contrat de mission** type : objet, périmètre, livrables, honoraires et modalités de paiement, durée, responsabilités, assurances, résiliation, litiges.
 - [ ] Contrats conclus **hors établissement** (chez le client) ou **à distance** : information précontractuelle et **droit de rétractation de 14 jours** du consommateur (Code de la consommation, art. L.221-5 et L.221-18). Prévoir le formulaire de rétractation et, si le client souhaite un démarrage anticipé, sa demande expresse.
 - [ ] Adhérer à un **médiateur de la consommation** (obligation pour tout professionnel vendant à des consommateurs, Code de la consommation, art. L.612-1) et l'indiquer sur le site, les contrats et les factures. Liste des médiateurs référencés sur [economie.gouv.fr/mediation-conso](https://www.economie.gouv.fr/mediation-conso).
+  - Médiateurs connaissant le secteur du bâtiment, cités par la Fédération française du bâtiment : **CM2C**, **BATIRMEDIATION CONSO**, **MED CONSO DEV**. Vérifiez qu'ils figurent toujours sur la liste officielle (la FFB a par exemple signalé le retrait d’agrément de Medicys) et comparez les tarifs : adhésion annuelle ou pluriannuelle, parfois complétée d'un coût par litige.
+  - Absence de médiateur : amende administrative pouvant atteindre 3 000 € pour une personne physique.
 - [ ] Afficher les prix ou les modalités de calcul des honoraires de manière claire avant tout engagement.
 - [ ] Régime de TVA (franchise en base ou non) et mentions correspondantes sur devis et factures.
 

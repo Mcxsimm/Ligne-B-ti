@@ -1745,6 +1745,12 @@ strong {
   gap: 0.55rem;
 }
 
+/* Les adresses e-mail longues passent à la ligne au lieu de déborder */
+.footer__list a,
+.contact-aside dd a {
+  overflow-wrap: anywhere;
+}
+
 .footer__bottom p {
   margin: 0;
 }

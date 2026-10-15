@@ -93,14 +93,14 @@
           <!--
             ENVOI DU FORMULAIRE
             Service : Web3Forms (offre gratuite), aucune donnée n'est stockée dans ce dépôt.
-            1. Créez une clé d'accès gratuite sur https://web3forms.com avec votre e-mail professionnel.
-            2. Remplacez A_COMPLETER_CLE_WEB3FORMS ci-dessous par cette clé (elle est publique par conception).
+            1. La clé d'accès (access_key) ci-dessous est publique par conception : elle permet seulement
+               d'envoyer des messages vers l'adresse associée sur web3forms.com.
+            2. Pour changer d'adresse de réception, générez une nouvelle clé sur web3forms.com.
             3. Facultatif : renseignez data-fallback-email avec votre e-mail professionnel.
-            Tant que la clé n'est pas renseignée, le formulaire n'envoie rien et l'indique clairement.
           -->
           <form id="contact-form" class="form" action="https://api.web3forms.com/submit" method="POST"
                 data-fallback-email="" aria-describedby="form-intro">
-            <input type="hidden" name="access_key" value=8c07bea2-a5ab-4a95-87ab-f6578857ba7c>
+            <input type="hidden" name="access_key" value="8c07bea2-a5ab-4a95-87ab-f6578857ba7c">
             <p id="form-intro" class="small">Les champs suivis d'un astérisque (*) sont obligatoires.</p>
 
             <div class="hp-field" aria-hidden="true">
