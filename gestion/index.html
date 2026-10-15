@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ligne&amp;Bati · Gestion</title>
+  <meta name="theme-color" content="#23262A">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#zone-principale">Aller au contenu</a>
+
+  <header class="barre" role="banner">
+    <a class="barre__marque" href="#/" aria-label="Ligne&amp;Bati Gestion — retour à la carte">
+      <span class="barre__logo">Ligne<em>&amp;</em>Bati</span>
+      <span class="barre__produit">Gestion</span>
+    </a>
+    <p class="barre__demo" id="bandeau-demo" hidden>
+      <strong>Prototype</strong><span class="barre__demo-long"> · données de démonstration fictives, enregistrées dans ce navigateur uniquement</span><span class="barre__demo-court"> données fictives</span>
+    </p>
+    <div class="barre__actions">
+      <button class="bouton bouton--clair" type="button" id="btn-recherche" aria-keyshortcuts="Control+K">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+        <span>Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="bouton bouton--clair" type="button" id="btn-vue" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <span>Vue liste</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="zone-principale">
+    <!-- Carte : point d'entrée -->
+    <section class="carte" id="carte" aria-label="Carte de l'entreprise">
+      <noscript><p class="carte__noscript">L'application nécessite JavaScript.</p></noscript>
+      <div class="carte__commandes" role="group" aria-label="Commandes de la carte">
+        <button type="button" class="ctrl" id="ctrl-plus" aria-label="Zoomer">+</button>
+        <button type="button" class="ctrl" id="ctrl-moins" aria-label="Dézoomer">−</button>
+        <button type="button" class="ctrl" id="ctrl-centre" aria-label="Recentrer la carte">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+        </button>
+      </div>
+      <div class="carte__rapide" id="raccourcis"></div>
+      <p class="carte__aide">Glisser pour se déplacer · molette ou pincement pour zoomer · cliquer un bâtiment pour l'ouvrir</p>
+    </section>
+
+    <!-- Vue liste : alternative à la carte (mobile, accessibilité) -->
+    <section class="liste-modules" id="liste-modules" aria-labelledby="liste-titre" hidden>
+      <h1 id="liste-titre" class="visually-hidden">Modules</h1>
+      <ul class="liste-modules__grille" id="liste-modules-grille"></ul>
+    </section>
+
+    <!-- Fenêtre de module -->
+    <section class="module" id="module" aria-labelledby="module-titre" hidden>
+      <header class="module__tete">
+        <button type="button" class="module__retour" id="module-retour">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          <span>Carte</span>
+        </button>
+        <nav class="module__fil" aria-label="Fil d'Ariane" id="module-fil"></nav>
+        <h1 class="module__titre" id="module-titre" tabindex="-1">Module</h1>
+        <div class="module__outils" id="module-outils"></div>
+      </header>
+      <div class="module__corps" id="module-corps"></div>
+    </section>
+  </main>
+
+  <!-- Recherche rapide -->
+  <dialog class="recherche" id="recherche" aria-label="Recherche rapide">
+    <div class="recherche__form">
+      <label for="recherche-champ" class="visually-hidden">Rechercher une affaire, une opération ou un contact</label>
+      <input type="search" id="recherche-champ" placeholder="Affaire, opération, contact, commande…" autocomplete="off">
+    </div>
+    <ul class="recherche__resultats" id="recherche-resultats" role="listbox" aria-label="Résultats"></ul>
+    <p class="recherche__aide">↑ ↓ pour naviguer · Entrée pour ouvrir · Échap pour fermer</p>
+  </dialog>
+
+  <!-- Fenêtre de formulaire générique -->
+  <dialog class="formulaire" id="formulaire" aria-labelledby="formulaire-titre">
+    <form method="dialog" id="formulaire-form" novalidate>
+      <h2 id="formulaire-titre">Formulaire</h2>
+      <div id="formulaire-champs"></div>
+      <p class="formulaire__erreur" id="formulaire-erreur" role="alert" hidden></p>
+      <div class="formulaire__actions">
+        <button class="bouton" type="submit" value="ok" id="formulaire-ok">Enregistrer</button>
+        <button class="bouton bouton--clair" type="submit" value="annuler" formnovalidate>Annuler</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
