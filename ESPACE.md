@@ -5,8 +5,17 @@ L'espace connecté est accessible par le lien **« Se connecter »** en haut à 
 | Rôle | Ce qu'il voit et fait |
 |---|---|
 | **Administrateur** (vous) | Tous les chantiers ; création et modification ; carte des outils ; création des comptes clients et salariés |
-| **Salarié** | Tous les chantiers et la carte des outils ; peut mettre à jour étapes, journal et réglages ; ne gère pas les comptes et ne supprime pas de chantier |
+| **Salarié** | Accès à **OmSmK** (conduite de travaux) ; tous les chantiers et la carte des outils ; peut mettre à jour étapes, journal et réglages vus par les clients ; ne gère pas les comptes et ne supprime pas de chantier |
 | **Client** | Uniquement ses chantiers : avancement, phase, étapes et comptes rendus que vous avez marqués « visibles par le client » |
+
+## Conduite de travaux : OmSmK
+
+Le travail de chantier des salariés se fait dans **OmSmK** (`https://mcxsimm.github.io/OmSmK/`, dépôt `Mcxsimm/OmSmK`) : pointage, journal et photos, planning, suivi hebdomadaire, réserves, sécurité, réunions, commandes, situations. Le menu **Conduite de travaux** et le tableau de bord de l'espace y mènent.
+
+- OmSmK reste un **site séparé** : sa propre base Supabase et sa connexion par code e-mail. Créez une équipe « Ligne&Bati » dans OmSmK (Paramètres → Travail en équipe) et invitez-y chaque salarié avec son adresse professionnelle.
+- **Sauvegardes** : les chantiers partagés en équipe sont enregistrés dans Supabase. Une fois Google configuré, une **copie de nuit automatique** part sur le Google Drive de l'entreprise (procédure dans le README d'OmSmK, section « Sauvegarde automatique de nuit »). Chaque appareil peut en plus enregistrer ses données sur Google Drive.
+- Pour un chantier de rénovation, choisissez le métier **Rénovation** : phases par lot et préparation de maîtrise d'œuvre.
+- L'espace connecté de ce site reste la **vitrine du suivi pour les clients** : avancement, étapes et comptes rendus que vous choisissez de leur montrer. Les deux ne sont pas reliés automatiquement : reportez ici l'avancement à communiquer au client.
 
 ## 1. Architecture
 

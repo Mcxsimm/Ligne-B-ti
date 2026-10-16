@@ -1066,3 +1066,9 @@
     transition: none;
   }
 }
+
+/* Accès à OmSmK (conduite de travaux des salariés) */
+.omsmk .omsmk__note {
+  font-size: .9rem;
+  color: var(--ink-soft);
+}

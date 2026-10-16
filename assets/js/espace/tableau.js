@@ -21,7 +21,8 @@
     document.querySelector("[data-salutation]").textContent = prenom ? "Bonjour " + prenom : "Tableau de bord";
     if (LB.estEquipe()) {
       document.getElementById("titre-page").textContent = "Tableau de bord";
-      document.getElementById("intro-page").textContent = "Vue d'ensemble des chantiers et de la mise en place des outils.";
+      document.getElementById("intro-page").textContent = "La conduite de travaux se fait dans OmSmK. Ici, vous tenez à jour ce que voient vos clients : avancement, étapes et comptes rendus.";
+      document.getElementById("liste-titre").textContent = "Suivi visible par les clients";
       initCreation();
     } else {
       document.getElementById("intro-page").textContent =
