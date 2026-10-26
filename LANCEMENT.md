@@ -9,7 +9,8 @@ Recherchez `À COMPLÉTER` dans le dépôt (encadré en pointillés sur le site)
 | Où | Information | État |
 |---|---|---|
 | `index.html` (section Tarifs) | Prix mensuel et conditions de la formule « Chargé d'affaires » | ⬜ à faire |
-| `mentions-legales.html` | Forme juridique, adresse, SIREN/SIRET, immatriculation, TVA | ⬜ à faire |
+| `mentions-legales.html` | Adresse, SIRET, médiateur de la consommation (forme juridique et TVA renseignées) | ⬜ à faire |
+| `cgu.html` | Mode d'accès des abonnés, médiateur de la consommation | ⬜ à faire |
 | `contact.html` | Clé Web3Forms et adresse de secours | ✅ fait |
 
 ## B. Avant de vendre ChargéPro
