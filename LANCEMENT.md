@@ -8,7 +8,7 @@ Recherchez `À COMPLÉTER` dans le dépôt (encadré en pointillés sur le site)
 
 | Où | Information | État |
 |---|---|---|
-| `index.html` (section Tarifs) | Prix mensuel et conditions de la formule « Chargé d'affaires » | ⬜ à faire |
+| `index.html` (section Tarifs) | Prix mensuel et conditions de la formule « Chargé d'affaires » | ✅ fait (19 €/mois, sans engagement) |
 | `mentions-legales.html` | Adresse, SIRET, médiateur de la consommation (forme juridique et TVA renseignées) | ⬜ à faire |
 | `cgu.html` | Mode d'accès des abonnés, médiateur de la consommation | ⬜ à faire |
 | `contact.html` | Clé Web3Forms et adresse de secours | ✅ fait |
