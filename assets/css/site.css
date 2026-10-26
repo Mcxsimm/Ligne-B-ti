@@ -186,6 +186,9 @@ strong { font-weight: 600; }
 .btn--outline-light { background: transparent; border-color: rgba(255, 255, 255, .45); color: #fff; box-shadow: none; }
 .btn--outline-light:hover { background: rgba(255, 255, 255, .08); border-color: #fff; color: #fff; }
 .btn[disabled] { opacity: .7; cursor: progress; }
+.btn--soon, .btn--soon:hover { background: transparent; color: var(--text-2); border-style: dashed; border-color: var(--border-strong); cursor: not-allowed; }
+.plans__note { text-align: center; margin-top: 20px; }
+.plan__badge { white-space: nowrap; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .link-arrow { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 600; text-decoration: none; }
 .link-arrow svg { width: 16px; height: 16px; transition: transform .15s var(--ease); }
