@@ -2,7 +2,7 @@
 # Remplace l'adresse publique du site dans toutes les pages, le sitemap et robots.txt.
 # À lancer une fois le nom de domaine connecté (voir README, étape 5).
 #
-#   Usage :  bash outils/changer-adresse.sh https://www.ligne-et-bati.fr/
+#   Usage :  bash outils/changer-adresse.sh https://www.chargepro.fr/
 #
 # L'adresse doit commencer par https:// et se terminer par une barre oblique.
 set -euo pipefail
