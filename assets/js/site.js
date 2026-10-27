@@ -105,7 +105,43 @@
     });
   }
 
-  /* 5. Formulaire de demande de démo (Web3Forms) ----------------------------
+  /* 5. Onglets des écrans (motif ARIA « tabs », activation manuelle au clic,
+        flèches gauche/droite, Début et Fin). Sans JS, tous les panneaux s'affichent. */
+  function initTabs() {
+    document.querySelectorAll("[data-tabs]").forEach(function (box) {
+      var tabs = Array.prototype.slice.call(box.querySelectorAll('[role="tab"]'));
+      if (!tabs.length) return;
+
+      function select(tab, focus) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute("aria-selected", String(on));
+          t.tabIndex = on ? 0 : -1;
+          document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+        });
+        if (focus) tab.focus();
+      }
+
+      tabs.forEach(function (tab, i) {
+        tab.addEventListener("click", function () { select(tab, false); });
+        tab.addEventListener("keydown", function (e) {
+          var next = null;
+          if (e.key === "ArrowRight") next = tabs[(i + 1) % tabs.length];
+          else if (e.key === "ArrowLeft") next = tabs[(i - 1 + tabs.length) % tabs.length];
+          else if (e.key === "Home") next = tabs[0];
+          else if (e.key === "End") next = tabs[tabs.length - 1];
+          if (next) {
+            e.preventDefault();
+            select(next, true);
+          }
+        });
+      });
+
+      select(tabs.filter(function (t) { return t.getAttribute("aria-selected") === "true"; })[0] || tabs[0], false);
+    });
+  }
+
+  /* 6. Formulaire de demande de démo (Web3Forms) ----------------------------
      - Si la clé d'accès n'est pas renseignée, rien n'est simulé : le bouton
        ouvre la messagerie avec la demande pré-remplie (data-fallback-email).
      - Aucune donnée n'est stockée dans le dépôt ni dans le navigateur.
@@ -245,6 +281,7 @@
       if (payload.email) payload.replyto = payload.email;
 
       submit.disabled = true;
+      submit.classList.add("is-loading");
       submit.innerHTML = '<span class="spinner" aria-hidden="true"></span> Envoi en cours…';
       status.hidden = true;
 
@@ -285,6 +322,7 @@
         .then(function () {
           if (timer) clearTimeout(timer);
           submit.disabled = false;
+          submit.classList.remove("is-loading");
           submit.innerHTML = submitLabel;
         });
     });
@@ -294,5 +332,6 @@
   initNav();
   initHeader();
   initYear();
+  initTabs();
   initContactForm();
 })();
