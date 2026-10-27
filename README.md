@@ -11,7 +11,7 @@ Site statique (HTML, CSS, JavaScript natif) qui présente ChargéPro, l'outil de
 ## Structure
 
 ```
-├── index.html              Accueil : promesse, fonctionnalités, mobile, données, tarifs, FAQ
+├── index.html              Accueil : hero, fonctionnalités, parcours, écrans (onglets), mobile, bénéfices, tarifs, données, FAQ
 ├── contact.html            Demande de démo (formulaire)
 ├── mentions-legales.html   Mentions légales (champs À COMPLÉTER)
 ├── confidentialite.html    Données personnelles et cookies
@@ -21,7 +21,7 @@ Site statique (HTML, CSS, JavaScript natif) qui présente ChargéPro, l'outil de
 ├── CLAUDE.md               Consignes pour Claude Code
 └── assets/
     ├── css/site.css        Feuille de style du site de vente (jetons, thème sombre)
-    ├── js/site.js          Menu mobile, apparitions, formulaire
+    ├── js/site.js          Menu mobile, onglets, apparitions, formulaire
     ├── fonts/              Inter (licence SIL OFL)
     └── images/produit/     Captures réelles de ChargéPro (mode démonstration)
 ```
@@ -32,8 +32,9 @@ Les dossiers `espace/`, `gestion/`, `supabase/` et les fichiers `assets/css/styl
 
 | Élément | Choix |
 |---|---|
-| Référence | Stripe : typographie nette, profondeur légère, grands visuels produit |
-| Marque | Bleu marine `#12335C`, orange `#E8590C` (logo et repères uniquement) |
+| Référence | SaaS B2B sobre : typographie nette, beaucoup d'air, grands visuels produit |
+| Marque | Bleu nuit `#142A3A`, vert `#C6F36B` (CTA, états positifs, repères), fonds `#FFFFFF` / `#F5F7F8` |
+| Logo | Pictogramme bâtiment en SVG inline (en-tête, pied de page, `favicon.svg`) |
 | Texte | Inter, chiffres tabulaires |
 | Visuels | Captures réelles de l'application, aucun visuel fictif |
 | Accessibilité | WCAG 2.1 AA : contrastes ≥ 4,5:1, cibles ≥ 44 px, focus visible |

@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://api.web3forms.com; form-action https://api.web3forms.com; base-uri 'self'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>ChargéPro — Le poste de pilotage du chargé d'affaires</title>
-  <meta name="description" content="ChargéPro réunit chantiers, devis, BTE, planning, marchés à bons de commande, CA et marge dans un seul outil pour chargés d'affaires du bâtiment. Sans installation, vos données restent chez vous.">
+  <title>ChargéPro — Gestion des affaires et suivi de chantier BTP</title>
+  <meta name="description" content="Centralisez devis, BTE, planning, pointages, marchés à bons de commande, CA et marge avec ChargéPro, l'outil de gestion conçu pour les chargés d'affaires du bâtiment.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://mcxsimm.github.io/Ligne-B-ti/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="ChargéPro">
-  <meta property="og:title" content="ChargéPro — Le poste de pilotage du chargé d'affaires">
-  <meta property="og:description" content="Chantiers, devis, BTE, planning, CA et marge : tout votre suivi d'affaires dans un seul outil, sans installation.">
+  <meta property="og:title" content="ChargéPro — Gestion des affaires et suivi de chantier BTP">
+  <meta property="og:description" content="Du devis à la facturation : vos affaires, vos équipes et vos indicateurs de marge dans un seul outil, sans installation.">
   <meta property="og:url" content="https://mcxsimm.github.io/Ligne-B-ti/">
   <meta property="og:image" content="https://mcxsimm.github.io/Ligne-B-ti/assets/images/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="ChargéPro — tableau de bord du chargé d'affaires">
   <meta name="twitter:card" content="summary_large_image">
 
-  <meta name="theme-color" content="#12335C">
+  <meta name="theme-color" content="#142A3A">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
@@ -41,7 +41,8 @@
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Navigateur web (ordinateur, tablette, téléphone)",
   "inLanguage": "fr-FR",
-  "description": "Outil de pilotage pour chargés d'affaires du bâtiment : chantiers, devis, BTE, cadences, planning et pointages, marchés à bons de commande, CA, marge et facturation."
+  "description": "Logiciel de gestion pour chargés d'affaires du bâtiment : devis, BTE, cadences, planning et pointages, marchés à bons de commande, CA, marge et facturation.",
+  "offers": { "@type": "Offer", "price": "19", "priceCurrency": "EUR", "description": "Formule Chargé d'affaires, par mois, sans engagement" }
 }
   </script>
 </head>
@@ -50,7 +51,7 @@
 
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="index.html" aria-current="page"><span class="brand__mark" aria-hidden="true">CP</span>ChargéPro<span class="visually-hidden"> — accueil</span></a>
+      <a class="brand" href="index.html" aria-current="page"><svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#142A3A"/><path d="M8 23v-8.5L16 9l8 5.5V23" fill="none" stroke="#C6F36B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 23v-5h6v5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/></svg>ChargéPro<span class="visually-hidden"> — accueil</span></a>
       <nav class="site-nav" aria-label="Navigation principale">
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -58,412 +59,426 @@
         </button>
         <ul class="site-nav__list" id="menu-principal">
           <li><a href="#fonctionnalites">Fonctionnalités</a></li>
-          <li><a href="#mobile">Mobile</a></li>
-          <li><a href="#donnees">Vos données</a></li>
           <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#donnees">Confidentialité</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li class="site-nav__cta"><a class="btn" href="contact.html">Demander une démo</a></li>
+          <li class="site-nav__cta"><a class="btn btn--sm" href="contact.html">Demander une démo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="contenu">
-    <!-- Héros : une promesse, deux actions -->
+    <!-- A. Hero : la promesse et une seule action -->
     <section class="hero" aria-labelledby="hero-titre">
-      <div class="container">
+      <div class="container hero__grid">
         <div class="hero__copy">
-          <p class="eyebrow">Pour les chargés d'affaires du bâtiment</p>
-          <h1 id="hero-titre">Vos chantiers, vos devis, votre marge. <em>Un seul écran.</em></h1>
-          <p class="lead">ChargéPro remplace la pile de tableurs du chargé d'affaires : prospection, chiffrage, planning des équipes, marchés à bons de commande, CA et facturation. Vous voyez où vous en êtes en dix secondes, chaque matin.</p>
+          <p class="eyebrow">Logiciel de gestion BTP</p>
+          <h1 id="hero-titre">Pilotez vos chantiers. <em>Maîtrisez vos marges.</em></h1>
+          <p class="lead">Du devis à la facturation, réunissez vos affaires, vos équipes et vos indicateurs dans un seul outil conçu pour le quotidien du bâtiment.</p>
           <div class="actions">
-            <a class="btn btn--lg" href="contact.html">Demander une démo
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a class="btn btn--lg btn--secondary" href="#fonctionnalites">Voir les fonctionnalités</a>
+            <a class="btn btn--lg" href="contact.html">Demander une démo gratuite
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
           <ul class="hero__facts">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Rien à installer</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Données stockées chez vous</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Version mobile incluse</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>Sans installation</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Données maîtrisées</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="14" height="10" rx="1"/><path d="M1 18h12"/><rect x="17" y="8" width="6" height="12" rx="1"/></svg>Sur ordinateur et mobile</li>
           </ul>
         </div>
-        <figure class="hero__visual reveal">
-          <div class="shot">
-            <div class="shot__bar" aria-hidden="true"><span></span><span></span><span></span><em>ChargéPro — Tableau de bord</em></div>
-            <img src="assets/images/produit/dashboard.webp" width="1600" height="1000" fetchpriority="high"
-                 alt="Tableau de bord ChargéPro : CA annuel réalisé par rapport à l'objectif, marge brute moyenne, devis du mois, rendez-vous prospection, carnet de commandes, encours facturé et to-do list.">
+        <figure class="devices">
+          <div class="laptop">
+            <div class="laptop__screen">
+              <img src="assets/images/produit/dashboard.webp" width="1600" height="1000" fetchpriority="high"
+                   alt="Tableau de bord ChargéPro sur ordinateur : CA annuel réalisé par rapport à l'objectif, marge brute moyenne, devis du mois, carnet de commandes, encours facturé et to-do list.">
+            </div>
+            <div class="laptop__base" aria-hidden="true"></div>
           </div>
-          <figcaption class="shot-caption">Capture réelle de ChargéPro, avec les données de démonstration.</figcaption>
+          <div class="phone">
+            <img src="assets/images/produit/mobile.webp" width="780" height="1688"
+                 alt="Version mobile de ChargéPro : chiffres clés, équipe du jour et actions à traiter.">
+          </div>
+          <figcaption class="visually-hidden">Captures réelles de ChargéPro, avec les données de démonstration.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- Preuves : faits vérifiables sur le produit -->
-    <section class="section section--alt section--tight" aria-labelledby="chiffres-titre">
+    <!-- C. Fonctionnalités principales -->
+    <section class="section section--tight" id="fonctionnalites" aria-labelledby="fonctions-titre">
       <div class="container">
-        <h2 id="chiffres-titre" class="visually-hidden">ChargéPro en chiffres</h2>
-        <ul class="stats">
-          <li><strong>6</strong><span>domaines, de la prospection au reste à facturer</span></li>
-          <li><strong>0</strong><span>installation : un navigateur suffit</span></li>
-          <li><strong>0</strong><span>cookie publicitaire, aucun traceur</span></li>
-          <li><strong>1 clic</strong><span>pour exporter le mois sous Excel</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Problème / solution -->
-    <section class="section" aria-labelledby="avant-titre">
-      <div class="container">
-        <div class="section__head section__head--center">
-          <p class="eyebrow">Le constat</p>
-          <h2 id="avant-titre">Des tableurs, des agendas et un carnet. Ça suffit.</h2>
-          <p class="lead">Le chargé d'affaires passe ses soirées à recopier les mêmes chiffres d'un fichier à l'autre. ChargéPro saisit une fois, et relie tout.</p>
-        </div>
-        <div class="compare">
-          <div class="compare__col compare__col--before reveal">
-            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg>Sans ChargéPro</h3>
-            <ul>
-              <li>Un classeur pour les devis, un autre pour le CA, un troisième pour les BTE</li>
-              <li>Le planning des équipes sur papier, les pointages ressaisis en fin de semaine</li>
-              <li>Les bons de commande des bailleurs suivis dans les e-mails</li>
-              <li>La marge réelle connue trop tard, à la clôture du mois</li>
-              <li>Les relances de devis oubliées</li>
-            </ul>
-          </div>
-          <div class="compare__col compare__col--after reveal">
-            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>Avec ChargéPro</h3>
-            <ul>
-              <li>Un BTE validé devient un devis, puis un chantier, sans ressaisie</li>
-              <li>Un chantier planifié s'impute automatiquement aux pointages</li>
-              <li>Chaque bon de commande se chiffre sur le BPU et se facture en un clic</li>
-              <li>CA, marge et reste à facturer à jour, par OTP et par mois</li>
-              <li>Actions prioritaires et to-do en tête du tableau de bord</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fonctionnalités principales, avec captures réelles -->
-    <section class="section section--alt" id="fonctionnalites" aria-labelledby="fonctions-titre">
-      <div class="container">
-        <div class="section__head">
-          <p class="eyebrow">Fonctionnalités</p>
-          <h2 id="fonctions-titre">Pensé par un chargé d'affaires, pour son quotidien.</h2>
-          <p class="lead">Chaque écran répond à une question que vous vous posez vraiment : où en est mon objectif, combien je marge sur ce chantier, qui est où demain.</p>
-        </div>
-
-        <article class="feature">
-          <div class="feature__copy reveal">
-            <span class="tag">Pilotage &amp; finances</span>
-            <h3>Votre objectif annuel, suivi au jour le jour.</h3>
-            <p>CA réalisé, marge brute, devis du mois, carnet de commandes, encours facturé : vos chiffres clés s'affichent dès l'ouverture, avec l'écart à l'objectif.</p>
-            <ul class="checks">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>CA et marge par mois, par OTP, par chantier</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Fin de mois : sélection des affaires à facturer, export Excel</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Reste à facturer et achats imputés par OTP</li>
-            </ul>
-          </div>
-          <figure class="shot reveal">
-            <div class="shot__bar" aria-hidden="true"><span></span><span></span><span></span><em>CA &amp; Marge</em></div>
-            <img src="assets/images/produit/ca.webp" width="1600" height="1000" loading="lazy"
-                 alt="Écran CA et marge : montant mis en facturation du mois, marge du mois, CA et marge cumulés, liste des chantiers par OTP et histogramme mensuel du CA et de la marge.">
-          </figure>
-        </article>
-
-        <article class="feature feature--reverse">
-          <div class="feature__copy reveal">
-            <span class="tag">Chiffrage</span>
-            <h3>Du BTE au devis, sans recopier une ligne.</h3>
-            <p>Chiffrez votre budget travaux à partir de la base Cadences : temps de pose, matériaux, prix. Validez le BTE, il donne les objectifs de production par poste et se transforme en devis détaillé.</p>
-            <ul class="checks">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Main-d'œuvre, fournitures, sous-traitance, marge cible</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Cadences par compagnon et par équipe</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Duplication d'un BTE pour chiffrer une variante</li>
-            </ul>
-          </div>
-          <figure class="shot reveal">
-            <div class="shot__bar" aria-hidden="true"><span></span><span></span><span></span><em>BTE — Budget chantier</em></div>
-            <img src="assets/images/produit/bte.webp" width="1600" height="1000" loading="lazy"
-                 alt="Éditeur de BTE : total des dépenses, marge brute de 39 % et prix de vente, puis le détail par lot (sous-traitance, main-d'œuvre en jours, fournitures) avec les boutons Excel, Dupliquer et Passer en devis.">
-          </figure>
-        </article>
-
-        <article class="feature">
-          <div class="feature__copy reveal">
-            <span class="tag">Exploitation</span>
-            <h3>Le planning des équipes et les pointages, enfin reliés.</h3>
-            <p>Planifiez un chantier sur le calendrier du mois : vos équipes s'affichent par couleur, et les heures s'imputent toutes seules aux pointages de la semaine.</p>
-            <ul class="checks">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Vos RDV, visites et équipes sur un même calendrier</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Pointages hebdomadaires par compagnon</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Mode carte pour situer vos chantiers sur le territoire</li>
-            </ul>
-          </div>
-          <figure class="shot reveal">
-            <div class="shot__bar" aria-hidden="true"><span></span><span></span><span></span><em>Planning &amp; pointages</em></div>
-            <img src="assets/images/produit/planning.webp" width="1600" height="1000" loading="lazy"
-                 alt="Calendrier mensuel ChargéPro avec rendez-vous clients et chantiers planifiés par équipe, filtres par équipe et bouton « Planifier un chantier ».">
-          </figure>
-        </article>
-
-        <article class="feature feature--reverse">
-          <div class="feature__copy reveal">
-            <span class="tag">Entretien</span>
-            <h3>Les marchés à bons de commande, sans tableur.</h3>
-            <p>Pour les bailleurs et les collectivités : chaque marché porte son BPU, chaque bon de commande se chiffre en piochant dans le BPU, et un BC réalisé se facture en un clic.</p>
-            <ul class="checks">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Alerte sur les délais d'intervention dépassés</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Contrats d'entretien et visites à programmer</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Coefficient de révision appliqué automatiquement</li>
-            </ul>
-          </div>
-          <figure class="shot reveal">
-            <div class="shot__bar" aria-hidden="true"><span></span><span></span><span></span><em>Marchés à bons de commande</em></div>
-            <img src="assets/images/produit/marches.webp" width="1600" height="1000" loading="lazy"
-                 alt="Écran des marchés à bons de commande : BC en cours, hors délai, réalisés à facturer, et tableau des bons avec résidence, date limite, montant et statut.">
-          </figure>
-        </article>
-      </div>
-    </section>
-
-    <!-- Tous les modules, regroupés -->
-    <section class="section" aria-labelledby="modules-titre">
-      <div class="container">
-        <div class="section__head">
-          <p class="eyebrow">Tout est inclus</p>
-          <h2 id="modules-titre">Tous les modules, rangés comme votre journée.</h2>
-        </div>
-        <ul class="modules">
-          <li class="module reveal">
-            <div class="module__head"><span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><h3>Pilotage</h3></div>
-            <ul><li>Tableau de bord et objectifs</li><li>Actions prioritaires</li><li>To-do list avec drapeau « important »</li></ul>
+        <h2 id="fonctions-titre" class="visually-hidden">Fonctionnalités principales</h2>
+        <ul class="features">
+          <li class="feature-item">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span>
+            <h3>Chiffrage et devis</h3>
+            <p>Créez et suivez vos devis en quelques clics.</p>
           </li>
-          <li class="module reveal">
-            <div class="module__head"><span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><h3>Commercial</h3></div>
-            <ul><li>Prospection et rendez-vous</li><li>Devis et relances</li><li>Comptes OTP et fichier clients</li></ul>
+          <li class="feature-item">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <h3>Planning et équipes</h3>
+            <p>Organisez vos chantiers, vos équipes et vos sous-traitants.</p>
           </li>
-          <li class="module reveal">
-            <div class="module__head"><span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18"/><path d="M3 22h18M10 7h4M10 11h4M10 15h4"/></svg></span><h3>Exploitation</h3></div>
-            <ul><li>Chantiers et journal de préparation</li><li>Planning et pointages</li><li>Cadences, BTE et achats fournisseurs</li></ul>
+          <li class="feature-item">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
+            <h3>Suivi et commandes</h3>
+            <p>Suivez les commandes, pointages et avancements.</p>
           </li>
-          <li class="module reveal">
-            <div class="module__head"><span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><h3>Exécution</h3></div>
-            <ul><li>Plan de prévention, APRI, PPSPS, PAQ</li><li>Un tronc commun saisi une seule fois</li><li>Pré-rempli depuis la fiche chantier</li></ul>
+          <li class="feature-item">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span>
+            <h3>Facturation et marge</h3>
+            <p>Suivez vos coûts et gardez le contrôle de votre rentabilité.</p>
           </li>
-          <li class="module reveal">
-            <div class="module__head"><span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><h3>Entretien</h3></div>
-            <ul><li>Contrats et visites</li><li>Marchés à bons de commande et BPU</li><li>1 BC = 1 facture</li></ul>
-          </li>
-          <li class="module reveal">
-            <div class="module__head"><span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M4 14h9M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12a7.9 7.9 0 0 0 7.8 8 7.7 7.7 0 0 0 5.2-2"/></svg></span><h3>Finances</h3></div>
-            <ul><li>CA et marge</li><li>Facturation</li><li>Reste à facturer (RAF)</li></ul>
+          <li class="feature-item">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></span>
+            <h3>Données et exports</h3>
+            <p>Retrouvez vos informations et exportez vos données.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- Mobile -->
+    <!-- D. Un outil complet : le parcours -->
+    <section class="section section--alt" id="parcours" aria-labelledby="parcours-titre">
+      <div class="container journey">
+        <div class="journey__intro">
+          <p class="eyebrow">Un outil complet</p>
+          <h2 id="parcours-titre">De la prospection à la facturation, tout est lié.</h2>
+          <p class="lead">ChargéPro centralise les étapes de votre activité pour vous offrir une vision claire de vos affaires.</p>
+          <a class="link-pill" href="#ecrans">Voir les écrans du logiciel
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ol class="journey__steps">
+          <li class="journey__step">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+            <h3>Prospection et devis</h3>
+            <p>Rendez-vous, relances et devis chiffrés depuis la base Cadences.</p>
+          </li>
+          <li class="journey__step">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <h3>Préparation et planning</h3>
+            <p>Le BTE validé fixe les objectifs ; le chantier se planifie par équipe.</p>
+          </li>
+          <li class="journey__step">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5M4 15v-3a6 6 0 0 1 6-6M14 6a6 6 0 0 1 6 6v3"/></svg></span>
+            <h3>Suivi des travaux</h3>
+            <p>Pointages, achats fournisseurs et documents d'exécution.</p>
+          </li>
+          <li class="journey__step">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M4 14h9M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12a7.9 7.9 0 0 0 7.8 8 7.7 7.7 0 0 0 5.2-2"/></svg></span>
+            <h3>Facturation et marge</h3>
+            <p>CA, marge et reste à facturer à jour, par OTP et par mois.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Écrans réels du logiciel, en onglets -->
+    <section class="section" id="ecrans" aria-labelledby="ecrans-titre">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Dans le logiciel</p>
+          <h2 id="ecrans-titre">Chaque écran répond à une question de votre journée.</h2>
+        </div>
+        <div class="tabs" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="Écrans de ChargéPro">
+            <button class="tabs__tab" type="button" role="tab" id="onglet-finances" aria-controls="panneau-finances" aria-selected="true">Finances</button>
+            <button class="tabs__tab" type="button" role="tab" id="onglet-chiffrage" aria-controls="panneau-chiffrage" aria-selected="false" tabindex="-1">Chiffrage</button>
+            <button class="tabs__tab" type="button" role="tab" id="onglet-planning" aria-controls="panneau-planning" aria-selected="false" tabindex="-1">Planning</button>
+            <button class="tabs__tab" type="button" role="tab" id="onglet-entretien" aria-controls="panneau-entretien" aria-selected="false" tabindex="-1">Entretien</button>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panneau-finances" aria-labelledby="onglet-finances" tabindex="0">
+            <div>
+              <h3>Combien je marge, ce mois-ci&nbsp;?</h3>
+              <p>CA réalisé, marge, carnet de commandes et encours facturé, avec l'écart à votre objectif annuel.</p>
+              <ul class="checks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>CA et marge par mois, par OTP, par chantier</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Fin de mois : affaires à facturer et export Excel</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Reste à facturer et achats imputés par OTP</li>
+              </ul>
+            </div>
+            <figure class="shot">
+              <img src="assets/images/produit/ca.webp" width="1600" height="1000" loading="lazy"
+                   alt="Écran CA et marge : montant mis en facturation du mois, marge du mois, CA et marge cumulés, liste des chantiers par OTP et histogramme mensuel.">
+            </figure>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panneau-chiffrage" aria-labelledby="onglet-chiffrage" tabindex="0">
+            <div>
+              <h3>Du BTE au devis, sans recopier une ligne.</h3>
+              <p>Chiffrez le budget travaux depuis la base Cadences. Le BTE validé donne les objectifs de production et devient un devis détaillé.</p>
+              <ul class="checks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Main-d'œuvre, fournitures, sous-traitance, marge cible</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Cadences par compagnon et par équipe</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Duplication d'un BTE pour chiffrer une variante</li>
+              </ul>
+            </div>
+            <figure class="shot">
+              <img src="assets/images/produit/bte.webp" width="1600" height="1000" loading="lazy"
+                   alt="Éditeur de BTE : total des dépenses, marge brute et prix de vente, puis le détail par lot avec les boutons Excel, Dupliquer et Passer en devis.">
+            </figure>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panneau-planning" aria-labelledby="onglet-planning" tabindex="0">
+            <div>
+              <h3>Qui est où, demain&nbsp;?</h3>
+              <p>Planifiez un chantier sur le calendrier : les équipes s'affichent par couleur et les heures s'imputent aux pointages de la semaine.</p>
+              <ul class="checks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Rendez-vous, visites et équipes sur un même calendrier</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Pointages hebdomadaires par compagnon</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Mode carte pour situer vos chantiers</li>
+              </ul>
+            </div>
+            <figure class="shot">
+              <img src="assets/images/produit/planning.webp" width="1600" height="1000" loading="lazy"
+                   alt="Calendrier mensuel ChargéPro avec rendez-vous clients et chantiers planifiés par équipe, filtres par équipe et bouton « Planifier un chantier ».">
+            </figure>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panneau-entretien" aria-labelledby="onglet-entretien" tabindex="0">
+            <div>
+              <h3>Les marchés à bons de commande, sans tableur.</h3>
+              <p>Chaque marché porte son BPU, chaque bon de commande se chiffre dans le BPU, et un BC réalisé se facture en un clic.</p>
+              <ul class="checks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Alerte sur les délais d'intervention dépassés</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Contrats d'entretien et visites à programmer</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Coefficient de révision appliqué automatiquement</li>
+              </ul>
+            </div>
+            <figure class="shot">
+              <img src="assets/images/produit/marches.webp" width="1600" height="1000" loading="lazy"
+                   alt="Écran des marchés à bons de commande : BC en cours, hors délai, réalisés à facturer, et tableau des bons avec résidence, date limite, montant et statut.">
+            </figure>
+          </div>
+        </div>
+        <p class="shot-caption">Captures réelles de ChargéPro, avec les données de démonstration.</p>
+      </div>
+    </section>
+
+    <!-- E. Ordinateur et mobile -->
     <section class="section section--alt" id="mobile" aria-labelledby="mobile-titre">
       <div class="container split">
-        <div class="reveal">
-          <p class="eyebrow">Sur le chantier</p>
-          <h2 id="mobile-titre">L'essentiel dans la poche.</h2>
-          <p class="lead">La version mobile reprend vos données et va droit au but : chiffres clés, équipes du jour, tâches à traiter.</p>
-          <ul class="checks">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Factures en retard, relances et devis à envoyer</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Agenda, tâches, chantiers et contacts</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Appel du client et itinéraire en un geste</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Thème clair ou sombre, au choix</li>
-          </ul>
-        </div>
-        <figure class="figure-reset reveal">
+        <figure class="device-panel figure-reset reveal">
           <div class="phone">
             <img src="assets/images/produit/mobile.webp" width="780" height="1688" loading="lazy"
                  alt="ChargéPro sur téléphone : CA de l'année, devis du mois, carnet de commandes, équipe du jour et liste des actions à traiter.">
           </div>
         </figure>
+        <div>
+          <p class="eyebrow">Sur ordinateur et mobile</p>
+          <h2 id="mobile-titre">Un accès simple et rapide, sur chantier comme au bureau.</h2>
+          <p class="lead">Consultez votre planning, retrouvez une information et vérifiez vos tâches du jour depuis vos appareils compatibles.</p>
+          <ul class="checks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Sur ordinateur : tous les modules, en plein écran</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Sur téléphone : chiffres clés, équipe du jour, agenda, tâches, chantiers et contacts</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Appel du client et itinéraire en un geste</li>
+          </ul>
+          <ul class="device-list" aria-label="Appareils compatibles">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="11" rx="1"/><path d="M2 19h20"/></svg>Ordinateur</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M11 18h2"/></svg>Tablette</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Smartphone</li>
+          </ul>
+          <p class="small">Dans un navigateur récent : Chrome, Edge, Firefox ou Safari.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Données et confidentialité -->
-    <section class="section" id="donnees" aria-labelledby="donnees-titre">
-      <div class="container split">
-        <div class="reveal">
-          <p class="eyebrow">Vos données</p>
-          <h2 id="donnees-titre">Vos chiffres restent les vôtres.</h2>
-          <p class="lead">ChargéPro n'a pas de serveur central. Ce que vous saisissez reste sur votre poste. Personne d'autre, nous compris, n'y a accès.</p>
+    <!-- F. Bénéfices métier -->
+    <section class="section" aria-labelledby="benefices-titre">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Au quotidien</p>
+          <h2 id="benefices-titre">Moins de ressaisie, plus de visibilité.</h2>
         </div>
-        <ul class="trust">
-          <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><div><strong>Stockage local</strong><p>Clients, chantiers, devis, BTE et pointages sont enregistrés dans votre navigateur.</p></div></li>
-          <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4 12a4 4 0 0 0 1 7.9z"/></svg><div><strong>Sauvegarde Google Drive, si vous le voulez</strong><p>Une copie dans votre propre Drive, avec une version datée par jour conservée 30 jours.</p></div></li>
-          <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><div><strong>Export à tout moment</strong><p>Sauvegarde complète en un fichier, exports Excel par mois et par marché.</p></div></li>
-          <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg><div><strong>Aucun traceur</strong><p>Pas de cookie publicitaire, pas d'outil de statistiques.</p></div></li>
+        <ul class="benefits">
+          <li class="benefit reveal">
+            <h3>Une meilleure visibilité</h3>
+            <p>Retrouvez les informations essentielles de vos affaires dans un espace centralisé.</p>
+          </li>
+          <li class="benefit reveal">
+            <h3>Un suivi plus rigoureux</h3>
+            <p>Suivez les tâches, les commandes, les dépenses et l'avancement des chantiers.</p>
+          </li>
+          <li class="benefit reveal">
+            <h3>Une meilleure maîtrise économique</h3>
+            <p>Comparez les budgets et les coûts réels pour identifier les écarts et suivre vos marges.</p>
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- Démarrage -->
-    <section class="section section--alt" aria-labelledby="demarrage-titre">
+    <!-- G. Tarifs -->
+    <section class="section section--alt" id="tarifs" aria-labelledby="tarifs-titre">
       <div class="container">
-        <div class="section__head section__head--center">
-          <p class="eyebrow">Démarrage</p>
-          <h2 id="demarrage-titre">Opérationnel dans la journée.</h2>
-        </div>
-        <ol class="steps">
-          <li class="step reveal"><h3>Une démo de 30 minutes</h3><p>On parcourt ChargéPro avec vos cas réels : vos chantiers, vos marchés, vos objectifs.</p></li>
-          <li class="step reveal"><h3>Votre profil en deux minutes</h3><p>Ouvrez ChargéPro dans votre navigateur, créez votre profil et vos objectifs. Rien à installer.</p></li>
-          <li class="step reveal"><h3>Vos affaires en cours</h3><p>Saisissez vos clients, chantiers et devis en cours. Le tableau de bord se remplit tout seul.</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Tarifs -->
-    <section class="section" id="tarifs" aria-labelledby="tarifs-titre">
-      <div class="container">
-        <div class="section__head section__head--center">
-          <p class="eyebrow">Tarifs</p>
-          <h2 id="tarifs-titre">Un prix simple, sans engagement caché.</h2>
-          <p class="lead">TVA non applicable, article 293 B du CGI : le prix affiché est le prix payé. Tous les modules sont inclus dans chaque formule.</p>
-        </div>
-        <div class="plans">
-          <article class="plan reveal">
-            <h3 class="plan__name">Découverte</h3>
-            <p class="plan__desc">Pour juger sur pièce, avec les données de démonstration.</p>
-            <p class="plan__price">0&nbsp;€</p>
-            <p class="plan__note">Démo guidée de 30 minutes</p>
-            <ul class="checks">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Présentation sur vos cas réels</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Jeu de données de démonstration</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Réponses à vos questions</li>
-            </ul>
-            <a class="btn btn--secondary" href="contact.html">Demander une démo</a>
-          </article>
-          <article class="plan plan--featured reveal">
-            <h3 class="plan__name">Chargé d'affaires <span class="plan__badge">Recommandé</span></h3>
-            <p class="plan__desc">Un utilisateur, tous les modules, la version mobile.</p>
-            <p class="plan__price">19&nbsp;€ <small>/ mois</small></p>
-            <p class="plan__note">Sans engagement, résiliable à tout moment</p>
-            <ul class="checks">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Tous les modules</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Version mobile</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Sauvegarde Google Drive</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Mises à jour incluses</li>
-            </ul>
-            <a class="btn" href="contact.html">Démarrer avec ChargéPro</a>
-          </article>
-          <article class="plan reveal">
-            <h3 class="plan__name">Agence</h3>
-            <p class="plan__desc">Pour équiper plusieurs chargés d'affaires d'une même entreprise.</p>
-            <p class="plan__price">Sur devis</p>
-            <p class="plan__note">Selon le nombre d'utilisateurs</p>
-            <ul class="checks">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Tout le contenu « Chargé d'affaires »</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Base Cadences adaptée à vos ouvrages</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Prise en main avec vos équipes</li>
-            </ul>
-            <a class="btn btn--secondary" href="contact.html">Nous contacter</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Compléments : modèles vendus sur Payhip -->
-    <section class="section" id="complements" aria-labelledby="complements-titre">
-      <div class="container">
-        <div class="section__head section__head--center">
-          <p class="eyebrow">Compléments</p>
-          <h2 id="complements-titre">Des modèles prêts à remplir, en plus de l'outil.</h2>
-          <p class="lead">Des fichiers Excel et Word à télécharger, sans abonnement. Achat unique sur notre boutique Payhip, fichier envoyé par e-mail dès le paiement.</p>
-        </div>
-        <div class="plans">
-          <article class="plan reveal">
-            <h3 class="plan__name">Fiche rendez-vous chantier <span class="plan__badge">Excel + PDF</span></h3>
-            <p class="plan__desc">Une page à remplir sur place : chantier, intervenants, météo, observations, décisions et actions.</p>
-            <p class="plan__price">0&nbsp;€</p>
-            <p class="plan__note">Offerte</p>
-            <ul class="checks">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Imprimable en A4</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Version PDF incluse</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Reprise dans le kit</li>
-            </ul>
-            <span class="btn btn--secondary btn--soon" role="link" aria-disabled="true">Bientôt disponible</span>
-          </article>
-          <article class="plan reveal">
-            <h3 class="plan__name">Kit suivi d'affaires BTP <span class="plan__badge">Excel</span></h3>
-            <p class="plan__desc">Un classeur pour piloter vos affaires du devis à la réception, sans logiciel.</p>
-            <p class="plan__price">39&nbsp;€</p>
-            <p class="plan__note">Achat unique, licence pour une entreprise</p>
-            <ul class="checks">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Mode d'emploi, démarrage en 3 minutes</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Onglets Affaires et Tableau de bord</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Fiche rendez-vous chantier intégrée</li>
-            </ul>
-            <span class="btn btn--secondary btn--soon" role="link" aria-disabled="true">Bientôt disponible</span>
-          </article>
-          <article class="plan reveal">
-            <h3 class="plan__name">Ordre de service de reprise des travaux <span class="plan__badge">Word</span></h3>
-            <p class="plan__desc">Le document pour reprendre un chantier suspendu, signé par les deux parties.</p>
-            <p class="plan__price">12&nbsp;€</p>
-            <p class="plan__note">Achat unique, licence pour une entreprise</p>
-            <ul class="checks">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Dates de suspension et de reprise</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Prestations, quantités et prix</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Signatures maître d'ouvrage et titulaire</li>
-            </ul>
-            <span class="btn btn--secondary btn--soon" role="link" aria-disabled="true">Bientôt disponible</span>
-          </article>
-        </div>
-        <p class="small plans__note">Prix TTC, TVA non applicable (art. 293 B du CGI). Vente soumise aux conditions générales de vente de la boutique.</p>
-      </div>
-    </section>
-
-    <!-- FAQ : objections -->
-    <section class="section section--alt" id="faq" aria-labelledby="faq-titre">
-      <div class="container container--narrow">
         <div class="section__head">
+          <p class="eyebrow">Tarifs</p>
+          <h2 id="tarifs-titre">Une offre claire et sans surprise.</h2>
+          <p class="lead">Un prix mensuel, tous les modules inclus. Le prix affiché est le prix payé.</p>
+        </div>
+
+        <article class="price-card" aria-labelledby="formule-titre">
+          <div>
+            <h3 class="price-card__name" id="formule-titre">Chargé d'affaires</h3>
+            <p class="price-card__desc">Un utilisateur, tous les modules, la version mobile.</p>
+            <p class="price"><strong>19&nbsp;€</strong><span>par mois</span></p>
+            <p class="price-card__terms">Payable chaque mois, sans engagement, résiliable à tout moment par e-mail. TVA non applicable, art. 293 B du CGI.</p>
+            <a class="btn btn--lg" href="contact.html">Demander une démo gratuite
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="price-card__aside">
+            <p class="price-card__aside-title">Inclus</p>
+            <ul class="checks">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Tous les modules : commercial, chiffrage, planning, entretien, finances</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Version mobile</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Sauvegarde dans votre Google Drive et exports</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Mises à jour incluses</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Support par e-mail, en principe sous 2 jours ouvrés</li>
+            </ul>
+          </div>
+        </article>
+
+        <ul class="other-plans">
+          <li class="other-plan">
+            <div>
+              <h3>Découverte · 0&nbsp;€</h3>
+              <p>Démo guidée de 30 minutes sur vos cas réels.</p>
+            </div>
+            <a class="link-arrow" href="contact.html">Réserver la démo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </li>
+          <li class="other-plan">
+            <div>
+              <h3>Agence · sur devis</h3>
+              <p>Plusieurs chargés d'affaires, base Cadences adaptée, prise en main.</p>
+            </div>
+            <a class="link-arrow" href="contact.html">Demander un devis
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </li>
+        </ul>
+        <p class="pricing__note">Paiement prélevé chaque mois via Stripe. Détail des conditions dans les <a href="cgu.html">conditions d'utilisation</a>.</p>
+
+        <div class="complements" id="complements">
+          <h3>Modèles Excel et Word</h3>
+          <p>En complément de l'outil, des fichiers prêts à remplir, sans abonnement. Achat unique sur notre boutique Payhip.</p>
+          <ul class="products">
+            <li class="product">
+              <h3>Fiche rendez-vous chantier · Excel + PDF</h3>
+              <p>Chantier, intervenants, météo, observations, décisions et actions.</p>
+              <div class="product__meta"><span class="product__price">Offerte</span><span class="product__status">Bientôt disponible</span></div>
+            </li>
+            <li class="product">
+              <h3>Kit suivi d'affaires BTP · Excel</h3>
+              <p>Un classeur pour piloter vos affaires du devis à la réception.</p>
+              <div class="product__meta"><span class="product__price">39&nbsp;€</span><span class="product__status">Bientôt disponible</span></div>
+            </li>
+            <li class="product">
+              <h3>Ordre de service de reprise des travaux · Word</h3>
+              <p>Pour reprendre un chantier suspendu, signé par les deux parties.</p>
+              <div class="product__meta"><span class="product__price">12&nbsp;€</span><span class="product__status">Bientôt disponible</span></div>
+            </li>
+          </ul>
+          <p class="pricing__note">Prix TTC, TVA non applicable (art. 293 B du CGI). Licence pour une entreprise.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- H. Confidentialité et sécurité -->
+    <section class="section" id="donnees" aria-labelledby="donnees-titre">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Confidentialité</p>
+          <h2 id="donnees-titre">Vos données restent sous votre contrôle.</h2>
+          <p class="lead">ChargéPro n'a ni serveur ni base de données centrale. Voici ce que cela implique, concrètement.</p>
+        </div>
+        <ul class="data-grid">
+          <li class="data-item">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+            <div>
+              <h3>Stockées sur votre appareil</h3>
+              <p>Clients, chantiers, devis, BTE, agenda et pointages sont enregistrés dans le navigateur de votre appareil. L'éditeur n'y a aucun accès.</p>
+            </div>
+          </li>
+          <li class="data-item">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg></span>
+            <div>
+              <h3>Liées à ce navigateur</h3>
+              <p>Un autre navigateur ou un autre appareil ne voit pas vos données. Vider les données du navigateur les efface : sauvegardez avant.</p>
+            </div>
+          </li>
+          <li class="data-item">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></span>
+            <div>
+              <h3>Sauvegarde et restauration</h3>
+              <p>Exportez une sauvegarde complète en un fichier, restaurez-la sur un autre poste. Exports Excel par mois et par marché.</p>
+            </div>
+          </li>
+          <li class="data-item">
+            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4 12a4 4 0 0 0 1 7.9z"/></svg></span>
+            <div>
+              <h3>Google Drive, seulement si vous l'activez</h3>
+              <p>Une copie dans votre propre Drive, une version datée par jour conservée 30 jours. L'outil n'accède qu'aux fichiers qu'il a créés.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="pricing__note">Le site n'utilise ni cookie ni outil de statistiques. Le formulaire de démo passe par Web3Forms, le paiement par Stripe. <a href="confidentialite.html">Lire la politique de confidentialité</a></p>
+      </div>
+    </section>
+
+    <!-- I. FAQ -->
+    <section class="section section--alt" id="faq" aria-labelledby="faq-titre">
+      <div class="container faq-layout">
+        <div>
           <p class="eyebrow">Questions fréquentes</p>
           <h2 id="faq-titre">Avant de vous décider.</h2>
+          <p class="muted">Une autre question&nbsp;? <a href="contact.html">Écrivez-nous</a>.</p>
         </div>
         <div class="faq">
           <details>
-            <summary>Faut-il installer quelque chose ?</summary>
-            <div class="faq__answer"><p>Non. ChargéPro s'ouvre dans un navigateur récent (Chrome, Edge, Firefox, Safari), sur ordinateur, tablette ou téléphone.</p></div>
+            <summary>À qui s'adresse ChargéPro&nbsp;?</summary>
+            <div class="faq__answer"><p>Aux chargés d'affaires et aux entreprises du bâtiment. ChargéPro est né dans l'étanchéité et la couverture ; son organisation (devis, BTE, chantiers, planning, marchés à bons de commande, CA et marge) correspond à la plupart des métiers du second œuvre. La démo sert à le vérifier avec vos cas.</p></div>
           </details>
           <details>
-            <summary>Où sont stockées mes données ?</summary>
-            <div class="faq__answer"><p>Dans votre navigateur, sur votre appareil. ChargéPro n'a pas de base de données centrale : l'éditeur n'a aucun accès à vos clients, chantiers ou chiffres. Vous pouvez en plus activer une sauvegarde dans votre propre Google Drive.</p></div>
+            <summary>Comment fonctionne le stockage des données&nbsp;?</summary>
+            <div class="faq__answer"><p>Vos données sont enregistrées dans le navigateur de votre appareil. ChargéPro n'a pas de base de données centrale : l'éditeur n'a aucun accès à vos clients, chantiers ou chiffres. Vous pouvez en plus activer une sauvegarde dans votre propre Google Drive.</p></div>
           </details>
           <details>
-            <summary>Et si je change d'ordinateur ?</summary>
-            <div class="faq__answer"><p>Exportez votre sauvegarde (un fichier) et restaurez-la sur le nouveau poste, ou reconnectez votre Google Drive : vos données reviennent telles quelles.</p></div>
+            <summary>Peut-on exporter ses données&nbsp;?</summary>
+            <div class="faq__answer"><p>Oui, à tout moment : une sauvegarde complète en un fichier, et des exports Excel par mois et par marché. Pour changer d'ordinateur, restaurez la sauvegarde sur le nouveau poste ou reconnectez votre Google Drive.</p></div>
           </details>
           <details>
-            <summary>ChargéPro convient-il à mon métier ?</summary>
-            <div class="faq__answer"><p>ChargéPro est né dans l'étanchéité et la couverture, mais son organisation (devis, chantiers, BTE, planning, marchés à bons de commande, CA et marge) correspond à la plupart des métiers du second œuvre. La démo sert justement à le vérifier avec vos cas.</p></div>
+            <summary>Le logiciel fonctionne-t-il sur mobile&nbsp;?</summary>
+            <div class="faq__answer"><p>Oui. ChargéPro s'ouvre dans un navigateur récent sur ordinateur, tablette ou téléphone, sans installation. Sur téléphone, une version dédiée va à l'essentiel : chiffres clés, équipe du jour, agenda, tâches, chantiers et contacts.</p></div>
           </details>
           <details>
-            <summary>Puis-je reprendre mes fichiers Excel ?</summary>
+            <summary>Quelles sont les fonctionnalités incluses&nbsp;?</summary>
+            <div class="faq__answer"><p>Toutes, dans chaque formule : tableau de bord et objectifs, prospection, devis et comptes OTP, chantiers, planning et pointages, cadences, BTE et achats, documents d'exécution (plan de prévention, PPSPS, PAQ), contrats d'entretien et marchés à bons de commande, CA, marge, facturation et reste à facturer.</p></div>
+          </details>
+          <details>
+            <summary>Puis-je reprendre mes fichiers Excel&nbsp;?</summary>
             <div class="faq__answer"><p>Les écrans reprennent la logique des classeurs habituels (BTE, CA mensuel, BPU). La reprise de vos données existantes se discute pendant la démo.</p></div>
           </details>
           <details>
-            <summary>Les calculs sont-ils garantis ?</summary>
+            <summary>Les calculs sont-ils garantis&nbsp;?</summary>
             <div class="faq__answer"><p>Les calculs de BTE, de marge et de cadences sont des outils d'aide à la décision. Comme pour tout chiffrage, vérifiez-les avant un usage contractuel.</p></div>
+          </details>
+          <details>
+            <summary>Comment demander une démonstration&nbsp;?</summary>
+            <div class="faq__answer"><p>Remplissez le <a href="contact.html">formulaire de demande de démo</a>. Votre demande est lue personnellement et vous êtes recontacté pour fixer un créneau de 30 minutes, en visio ou par téléphone.</p></div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Rappel de l'action -->
+    <!-- J. Appel à l'action final -->
     <section class="section cta-band" aria-labelledby="cta-titre">
-      <div class="container">
-        <p class="eyebrow">Démo gratuite</p>
-        <h2 id="cta-titre">Reprenez la main sur vos affaires.</h2>
-        <p>30 minutes pour voir ChargéPro avec vos propres chantiers. Sans engagement.</p>
-        <div class="actions">
-          <a class="btn btn--lg btn--light" href="contact.html">Demander une démo
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="container cta-band__inner">
+        <div>
+          <h2 id="cta-titre">Reprenez le contrôle de vos affaires.</h2>
+          <p>Découvrez comment ChargéPro peut s'intégrer à votre organisation.</p>
         </div>
+        <a class="btn btn--lg" href="contact.html">Demander une démo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </section>
   </main>
@@ -472,14 +487,13 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">CP</span>ChargéPro</a>
-          <p>Le poste de pilotage du chargé d'affaires du bâtiment.</p>
+          <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#142A3A"/><path d="M8 23v-8.5L16 9l8 5.5V23" fill="none" stroke="#C6F36B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 23v-5h6v5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/></svg>ChargéPro</a>
+          <p>Le logiciel de gestion des chargés d'affaires du bâtiment : devis, chantiers, planning, CA et marge.</p>
         </div>
         <div>
           <p class="footer__title">Produit</p>
           <ul class="footer__list">
             <li><a href="index.html#fonctionnalites">Fonctionnalités</a></li>
-            <li><a href="index.html#mobile">Version mobile</a></li>
             <li><a href="index.html#tarifs">Tarifs</a></li>
             <li><a href="index.html#complements">Modèles Excel et Word</a></li>
             <li><a href="index.html#faq">FAQ</a></li>
